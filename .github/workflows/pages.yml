@@ -27,9 +27,18 @@ jobs:
           node-version: 22
           cache: npm
 
-      # сайт живёт в подкаталоге /<repo>/; для репо <user>.github.io — в корне
+      # base зависит от того, где сайт живёт сейчас: с кастомным доменом
+      # (Settings → Pages → Custom domain) — в корне '/', иначе в /<repo>/
       - name: Compute base path
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          CNAME=$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '.cname // empty' 2>/dev/null || true)
+          if [ -n "$CNAME" ]; then
+            echo "Custom domain: $CNAME — сайт в корне"
+            echo "VITE_BASE_PATH=/" >> "$GITHUB_ENV"
+            exit 0
+          fi
           REPO="${GITHUB_REPOSITORY#*/}"
           OWNER="${GITHUB_REPOSITORY%%/*}"
           if [ "$REPO" = "$OWNER.github.io" ]; then

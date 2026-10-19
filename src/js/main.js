@@ -3,8 +3,10 @@ import '../styles/main.css'
 // эндпоинт бэкенда заявок (если задеплоен; в статической версии не используется)
 const LEAD_ENDPOINT = '/api/lead'
 
-// GitHub Pages: бэкенда нет — заявку оформляем письмом (mailto) дизайнеру
-const STATIC_LEADS = /\.github\.io$/.test(location.hostname)
+// статическая версия (GitHub Pages, кастомный домен): бэкенда нет —
+// заявку оформляем письмом (mailto) дизайнеру; fetch остаётся только
+// при локальной разработке (dev-сервер + бот на 127.0.0.1:8787)
+const STATIC_LEADS = !/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)
 const LEAD_EMAIL = 'arustamova_k@bk.ru'
 
 const doc = document

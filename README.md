@@ -38,6 +38,15 @@ workflow вычисляет `VITE_BASE_PATH`, а плагин в `vite.config.js
 
 Однократное включение: Settings → Pages → Source: **GitHub Actions**.
 
+### Кастомный домен (katrina-batina.ru)
+
+Custom domain в Settings → Pages + A-записи апекса на GitHub
+(185.199.108–111.153), `www` — CNAME на `<user>.github.io`; затем включить
+Enforce HTTPS. Workflow сам видит включённый домен и собирает с `base: /`
+(без домена — с base `/<repo>/`, зеркало на `github.io` продолжает работать
+и после привязки редиректит на домен). После смены настроек Pages достаточно
+запустить workflow ещё раз (push или Run workflow).
+
 Проверить Pages-сборку локально:
 
 ```bash
