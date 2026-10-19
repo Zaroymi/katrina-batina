@@ -1,0 +1,12 @@
+/* Локальные шрифты, добавленные вручную (не трогает scripts/fetch-fonts.mjs) */
+
+/* «Princess Diana» — рукописный шрифт из брифа (автор Alexandra Gophmann).
+   Источник: ffont.ru; свободное распространение, коммерческую лицензию
+   рекомендуется подтвердить у автора (см. README). */
+@font-face {
+  font-family: 'Princess Diana';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/princess-diana.woff2) format('woff2');
+}

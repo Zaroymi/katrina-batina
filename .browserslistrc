@@ -1,0 +1,7 @@
+# Целевые браузеры для autoprefixer (широкий круг устройств)
+defaults
+last 3 versions
+iOS >= 12
+Safari >= 12
+Android >= 81
+not dead

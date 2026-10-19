@@ -1,0 +1,24 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+server/.env
+
+# локальные исходники фото (веб-версии уже в public/images/photos/)
+photo/
+
+# не публикуем: инфраструктура прод-сервера, бот-нотификатор, рабочие документы
+deploy/
+server/
+BRIEF.md
+BRIEF-filled.md
+DESIGN.md
+loader-demo.html
+
+# локальные утилиты разработки (фото/шрифты/плейсхолдеры) — не нужны для сборки
+scripts/fetch-fonts.mjs
+scripts/make-placeholders.mjs
+scripts/convert-photos.mjs
+
+# SVG-плейсхолдеры (все образы с реальными фото; вернуть при новых платьях без фото)
+public/images/*.svg

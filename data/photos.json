@@ -1,0 +1,17 @@
+{
+  "dresses": {
+    "pion": 11,
+    "anturium": 5,
+    "orhideya": 6,
+    "ameli": 8,
+    "luiza": 12,
+    "amfora": 6,
+    "ashima": 7,
+    "sharlotta": 6,
+    "liliya": 8
+  },
+  "veil": 4,
+  "process": 3,
+  "hasDesigner": true,
+  "hasHero": true
+}

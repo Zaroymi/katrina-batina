@@ -1,0 +1,36 @@
+/* Дизайн-токены — значения 1:1 из DESIGN.md */
+:root {
+  /* Палитра (§2) */
+  --c-bg: #fbf8f3;
+  --c-bg-alt: #f3ede3;
+  --c-ink: #26231f;
+  --c-ink-soft: #6e675c;
+  --c-line: #e3dacb;
+  --c-accent: #a98e63;
+  --c-accent-ink: #8a744f;
+
+  /* Типографика (§3): основной PT Root UI + рукописный акцент.
+     «Princess Diana» первым в стеке: когда появится лицензионный файл,
+     достаточно добавить @font-face — стили менять не придётся. */
+  --font-display: 'PT Root UI', 'Segoe UI', system-ui, Arial, sans-serif;
+  --font-body: 'PT Root UI', 'Segoe UI', system-ui, Arial, sans-serif;
+  --font-script: 'Princess Diana', 'Marck Script', 'Segoe Script', cursive;
+
+  /* Сетка и ритм (§4) */
+  --container: 1240px;
+  --gutter: 20px;
+  --section-y: 72px;
+  --header-h: 72px;
+
+  /* Движение (§6) */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 0.3s;
+  --dur-slow: 0.7s;
+}
+
+@supports (width: clamp(1px, 1vw, 2px)) {
+  :root {
+    --gutter: clamp(20px, 4vw, 40px);
+    --section-y: clamp(64px, 10vw, 136px);
+  }
+}

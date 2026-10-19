@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://katrina-batina.ru/sitemap.xml

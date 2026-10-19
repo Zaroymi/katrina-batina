@@ -1,0 +1,39 @@
+<dialog class="order-modal" id="order-modal" aria-labelledby="order-modal-title">
+  <div class="order-modal__inner">
+    <button class="order-modal__close" type="button" data-order-close aria-label="Закрыть">&times;</button>
+    <p class="eyebrow">Заявка</p>
+    <h2 class="order-modal__title" id="order-modal-title">Оформить заказ</h2>
+    <p class="order-modal__dress"><span data-order-dress></span></p>
+    <form class="lead-form" data-lead-form>
+      <input type="hidden" name="intro" value="Заказ с сайта.">
+      <input type="text" name="company" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" >
+      <label class="field">
+        <span>Контакт для обратной связи</span>
+        <input name="contact" type="text" placeholder="Телефон, e-mail или ник в Telegram" required>
+      </label>
+      <label class="field">
+        <span>Комментарий</span>
+        <textarea name="message" rows="3" placeholder="Размер, дата свадьбы, пожелания"></textarea>
+      </label>
+      <div class="lead-form__actions">
+        <button class="btn btn--solid" type="submit">Отправить заявку</button>
+      </div>
+      <p class="lead-form__invalid" hidden>
+        Укажите контакт для связи — телефон, e-mail или ник в Telegram.
+      </p>
+      <p class="lead-form__done" hidden>
+        Спасибо! Мы получили вашу заявку и свяжемся с вами в ближайшее время.
+      </p>
+      <p class="lead-form__error" hidden>
+        Не получилось отправить заявку. Напишите нам напрямую в
+        <a href="https://t.me/katrina_batina" target="_blank" rel="noopener">Telegram</a> —
+        ответим быстро.
+      </p>
+      <p class="lead-form__hint">
+        Или напишите нам в
+        <a href="https://t.me/katrina_batina" target="_blank" rel="noopener">Telegram</a>&nbsp;—
+        ответим в&nbsp;течение&nbsp;дня.
+      </p>
+    </form>
+  </div>
+</dialog>
